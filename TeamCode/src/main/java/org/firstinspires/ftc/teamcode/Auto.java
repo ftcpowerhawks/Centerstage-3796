@@ -10,14 +10,6 @@ import java.util.List;
 
 public class Auto extends Skelly {
 
-    /**
-     * The variable to store our instance of the AprilTag processor.
-     */
-
-    /**
-     * The variable to store our instance of the vision portal.
-     */
-
     //Initialize Required Variables for AprilTag
 
     double leftCenterX, middleCenterX, rightCenterX;
@@ -32,7 +24,7 @@ public class Auto extends Skelly {
             while (opModeIsActive()) {
                 //April Tag
                 List<AprilTagDetection> aprilTagDetections = vision.aprilTag.getDetections();
-                if (!aprilTagDetections.isEmpty()){
+                if (!aprilTagDetections.isEmpty()) {
                     for (AprilTagDetection detection : aprilTagDetections) {
                         if (detection.id == vision.leftId) {
                             leftCenterX = detection.center.x;
